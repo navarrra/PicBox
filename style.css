@@ -1,0 +1,148 @@
+body{
+  background-color: #f2f2f2;
+  z-index: 6;
+  margin-right:2%;
+  margin-left: 2%;
+}
+
+/**************************
+        TOP BAR
+**************************/
+.nav{
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: no-wrap;
+  background-color: tomato;
+  width:100%;
+  height: auto;
+  padding: 1.8em;
+  margin: -2em;
+  box-shadow: 0px 15px 30px -19px rgba(0, 0, 0, .8); /*gives the box a nice float look*/
+  z-index: 11;
+  position: relative;
+}
+
+#menutab{
+  width: 70px;
+  height:auto;
+  margin:1.4em;
+}
+
+.signup{
+  text-align:right;
+}
+
+.bar{
+  margin: 1em 1em -3em;
+}
+
+.logo{
+  font-family: 'Pacifico', cursive;
+  font-size: 3.5em;
+  margin-top: .3em;
+  padding-bottom: .5em;
+}
+
+.item3{
+margin-left: auto;
+margin-top: -.1em;
+}
+
+/**************************
+         SLIDEOUT MENU
+**************************/
+ul{
+  margin: 10em 1em;
+}
+
+li{
+  list-style: none;
+  color: white;
+}
+
+li a{
+  display:block;
+}
+
+.menu{
+  font-size: 2em;
+  padding: 1em 0em ;
+
+}
+
+.overlay{
+  background-color: rgba(64,64,64, 0.9);
+  width:101%;
+  height:100%;
+  top: 0;
+  left: -102%;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 0;
+  transition: left .5s;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+.rotate{
+  transform:rotate(90deg);
+}
+
+.showmenu{
+  left:0%;
+  transition: left .5s;
+
+}
+
+.hidemenu{
+  left:-100%;
+  transition: left .5s;
+}
+
+/**************************
+         Signup Sheet
+**************************/
+
+.signup{
+  display: flex;
+  margin-top:5%;
+  margin-left:1.5%;
+  background: linear-gradient( tomato ,#ff7e5f, #feb47b);
+  width:100%;
+  height: 100%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  border: none;
+  box-shadow: 3px 7px 5px 1px rgba(0, 0, 0, 0.2);
+  display:none;
+  z-index: 100;
+}
+
+.signup h2{
+  font-family: 'Pacifico', cursive;
+  font-size: 2.7em;
+  padding-top: 1em;
+}
+
+.cancel{
+  padding-bottom: 2em;
+
+}
+
+/**************************
+          HomePage
+**************************/
+
+.welcomepage{
+  display: block;
+  top: 20%;
+        left: 28%;
+  text-align: center;
+  position: fixed;
+  z-index:-2;

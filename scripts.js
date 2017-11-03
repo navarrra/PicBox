@@ -27,5 +27,9 @@ $(document).ready(function(){
     $(".signup").hide("slow");
   });
 
-  
+  //ajax request to connect to api
+  $.ajax({
+    
+  })
+
 });

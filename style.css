@@ -141,8 +141,13 @@ a{
 
 .welcomepage{
   display: block;
-  top: 20%;
-        left: 28%;
-  text-align: center;
-  position: fixed;
+  position: relative;
   z-index:-2;
+  margin-top: 5em;
+  z-index: 11;
+  text-align: center;
+}
+
+h2{
+
+}

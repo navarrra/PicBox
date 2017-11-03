@@ -28,8 +28,18 @@ $(document).ready(function(){
   });
 
   //ajax request to connect to api
-  $.ajax({
-    
-  })
+
 
 });
+
+var xhr = new XMLHttpRequest(),
+    method = "GET",
+    url = "https://pokeapi.co/api/v2/";
+
+xhr.open(method, url, true);
+xhr.onreadystatechange = function () {
+  if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+    console.log("ready");
+  }
+};
+xhr.send();

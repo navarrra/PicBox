@@ -28,13 +28,20 @@ $(document).ready(function(){
   });
 
   //ajax request to connect to api
+  var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne";
+  var options = {
+    tags:
+  };
+  $("searchBtn").click(function(){
+    .getJSON(flickrAPI, options,  )
 
+  });
 
 });
 
 var xhr = new XMLHttpRequest(),
     method = "GET",
-    url = "https://pokeapi.co/api/v2/";
+    url = "https://api.flickr.com/services/rest/?method=flickr.test.echo&name=value";
 
 xhr.open(method, url, true);
 xhr.onreadystatechange = function () {

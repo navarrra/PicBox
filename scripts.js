@@ -28,25 +28,42 @@ $(document).ready(function(){
   });
 
   //ajax request to connect to api
-  var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne";
+  var weatherAPI = "http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=";
+  var apiKey = "8d3bcd3e412a8f4ca6bb2b0183ea2c78";
+  var city = "";
   var options = {
-    tags:
+    tags: "panda",
+    format:"json"
   };
-  $("searchBtn").click(function(){
-    .getJSON(flickrAPI, options,  )
 
+  var jqxhr = $.ajax( weatherAPI + apiKey )
+    .done(function() {
+      alert( "success" );
+    })
+    .fail(function() {
+      alert( "error" );
+    })
+    .always(function() {
+      alert( "complete" );
+    });
+
+  $("searchBtn").click(function(event){
+    event.preventDefault();
+    $.getJSON(weatherAPI, options, displayPhotos);
   });
+
 
 });
 
-var xhr = new XMLHttpRequest(),
-    method = "GET",
-    url = "https://api.flickr.com/services/rest/?method=flickr.test.echo&name=value";
 
-xhr.open(method, url, true);
-xhr.onreadystatechange = function () {
-  if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-    console.log("ready");
-  }
-};
-xhr.send();
+// var xhr = new XMLHttpRequest(),
+//     method = "GET",
+//     url = "https://api.flickr.com/services/rest/?method=flickr.test.echo&name=value";
+//
+// xhr.open(method, url, true);
+// xhr.onreadystatechange = function () {
+//   if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+//     console.log("ready");
+//   }
+// };
+// xhr.send();

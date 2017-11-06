@@ -132,7 +132,6 @@ a{
 
 .cancel{
   padding-bottom: 2em;
-
 }
 
 /**************************
@@ -143,11 +142,30 @@ a{
   display: block;
   position: relative;
   z-index:-2;
-  margin-top: 5em;
+  margin-top: 10em;
   z-index: 11;
   text-align: center;
 }
 
-h2{
+#mainwelcome{
+  font-family: 'Pacifico', cursive;
+  font-size: 5em;
+  text-align: none;
+}
 
+.entercity{
+  font-size: 3em;
+}
+
+.searchbox{
+  border: none;
+  padding: .2em;
+  font-size: 3em;
+}
+
+.searchBtn{
+  margin-top: 1em;
+  border: none;
+  padding: .8em 2em;
+  font-size: 2em;
 }

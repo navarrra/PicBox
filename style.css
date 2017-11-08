@@ -18,7 +18,7 @@ body{
   padding: 1.8em;
   margin: -2em;
   box-shadow: 0px 15px 30px -19px rgba(0, 0, 0, .8); /*gives the box a nice float look*/
-  z-index: 11;
+  z-index: 13;
   position: relative;
 }
 
@@ -71,7 +71,7 @@ li a{
 }
 
 .overlay{
-  background-color: rgba(64,64,64, 0.9);
+  background-color: rgba(64,64,64,.9);
   width:101%;
   height:100%;
   top: 0;
@@ -79,7 +79,7 @@ li a{
   right: 0;
   bottom: 0;
   position: absolute;
-  z-index: 0;
+  z-index: 12;
   transition: left .5s;
 }
 
@@ -145,6 +145,7 @@ a{
   margin-top: 10em;
   z-index: 11;
   text-align: center;
+  /*display: none;*/
 }
 
 #mainwelcome{
@@ -154,18 +155,39 @@ a{
 }
 
 .entercity{
-  font-size: 3em;
+  font-size: 2.7em;
 }
 
 .searchbox{
   border: none;
   padding: .2em;
   font-size: 3em;
+  border-radius: 10px;
 }
-
 .searchBtn{
   margin-top: 1em;
   border: none;
   padding: .8em 2em;
   font-size: 2em;
+  border-radius: 10px;
+}
+
+
+/**************************
+   Search Result display
+**************************/
+
+.searchResults{
+  margin-top: 15em;
+  text-align: center;
+  display: none;
+}
+
+.city{
+  font-size: 5.6em;
+}
+
+ .temp{
+  font-size: 8em;
+  margin-top:1em;
 }

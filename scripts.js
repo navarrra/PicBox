@@ -46,18 +46,5 @@ $(document).ready(function(){
     },
   });
 };
-  // var jqxhr = $.ajax( weatherAPI + apiKey )
-  //   .done(function() {
-  //     alert( "success" );
-  //   })
-  //   .fail(function() {
-  //     alert( "error" );
-  //   })
-  //   .always(function() {
-  //     alert( "complete" );
-  //   });
-
-
-
 
 });

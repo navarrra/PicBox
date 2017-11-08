@@ -145,7 +145,7 @@ a{
   margin-top: 10em;
   z-index: 11;
   text-align: center;
-  /*display: none;*/
+
 }
 
 #mainwelcome{
@@ -180,6 +180,10 @@ a{
 .searchResults{
   margin-top: 15em;
   text-align: center;
+
+}
+
+.hideSearchresults{
   display: none;
 }
 

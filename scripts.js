@@ -37,14 +37,22 @@ $(document).ready(function(){
   var city = "q=" + $(".searchbox").val();
   var metric = "units=metric";
   var imperial = "units=imperial";
+  var cityName= document.getElementsByClassName("city");
+
 
 
   $.ajax({
     url: weatherCity + city + imperial + apiKey,
     success: function(data){
       console.log("success", data);
+      $(".welcomepage").hide();
+      $(".searchResults").removeClass(".hideSearchresults");
+      cityName.innerHTML= "new orlenes";
+
     },
   });
 };
+
+
 
 });

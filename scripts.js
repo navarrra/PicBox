@@ -46,8 +46,8 @@ $(document).ready(function(){
         console.log("success", data);
         $(".welcomepage").hide();
         $(".searchResults").removeClass("hideSearchresults");
-        cityName.innerHTML = data.name;
-        temp.innerHTML = data.main.temp;
+        cityName.innerHTML = data.name + ", " + data.sys.country;
+        temp.innerHTML = data.main.temp + "°";
 
     },
   });

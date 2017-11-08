@@ -35,19 +35,19 @@ $(document).ready(function(){
   var weatherCity = "http://api.openweathermap.org/data/2.5/weather?"
   var apiKey = "&APPID=8d3bcd3e412a8f4ca6bb2b0183ea2c78";
   var city = "q=" + $(".searchbox").val();
-  var metric = "units=metric";
-  var imperial = "units=imperial";
-  var cityName= document.getElementsByClassName("city");
-
-
+  var metric = "&units=metric";
+  var imperial = "&units=imperial";
 
   $.ajax({
     url: weatherCity + city + imperial + apiKey,
     success: function(data){
-      console.log("success", data);
-      $(".welcomepage").hide();
-      $(".searchResults").removeClass(".hideSearchresults");
-      cityName.innerHTML= "new orlenes";
+      var cityName = document.getElementById("city");
+      var temp = document.getElementById("temp");
+        console.log("success", data);
+        $(".welcomepage").hide();
+        $(".searchResults").removeClass("hideSearchresults");
+        cityName.innerHTML = data.name;
+        temp.innerHTML = data.main.temp;
 
     },
   });

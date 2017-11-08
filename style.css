@@ -187,11 +187,11 @@ a{
   display: none;
 }
 
-.city{
+#city{
   font-size: 5.6em;
 }
 
- .temp{
+ #temp{
   font-size: 8em;
   margin-top:1em;
 }

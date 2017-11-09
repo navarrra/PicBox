@@ -10,6 +10,8 @@
       <script type="text/javascript" src="..\..\GitHub\PicBox\scripts.js"></script>
   </head>
   <body>
+
+    <!---Top nav bar--->
    <div class="flex-container nav">
      <div class="flex-item item1 bar">
       <img src="https://image.flaticon.com/icons/svg/54/54175.svg" alt="menu" id="menutab" >
@@ -21,6 +23,8 @@
        <h3><a class="signupbtn" href="#">Sign Up</a></h3>
      </div>
    </div>
+
+   <!---slide out menu--->
   <div class=" menuitems">
    <div class="overlay">
      <ul>
@@ -30,6 +34,8 @@
      </ul>
    </div>
   </div>
+
+  <!---signup--->
    <div class="container signup">
     <h2>Welcome to weatherBox</h2>
       <h2>Sign Up<h2>
@@ -48,16 +54,21 @@
           <input type="submit">
           <p><a class="cancel" href="#">Cancel</a></p>
     </div>
+
+    <!---welcome search page--->
     <div class="welcomepage">
           <h2 id="mainwelcome">Welcome</h2>
         <div class="welpage">
           <p class="entercity">Enter City, State, Country</p>
         </div>
-        <form>
+    <!---search field--->
           <input type="text" class="searchbox"><br>
+            <button class="cfbutton" id="cbutton">C°</button>
+            <button class="cfbutton" id="fbutton">F°</button><br>
           <input type="button" value="Submit" class= "searchBtn">
-        </form>
     </div>
+
+    <!---search results--->
     <div class="searchResults hideSearchresults">
       <div id="city"></div>
         <h3 class="curtemp"> Current Temperature:</h3>

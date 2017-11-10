@@ -3,6 +3,9 @@ body{
   z-index: 6;
   margin-right:2%;
   margin-left: 2%;
+  /*background-image: url("http://www.seattleweatherblog.com/wp-content/uploads/2012/09/Haze.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;*/
 }
 
 /**************************
@@ -183,7 +186,7 @@ a{
 #fbutton{
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  backgroou
+
 }
 
 .searchBtn{
@@ -222,6 +225,21 @@ a{
   position: relative;
   margin-top: 2em;
   font-size: 3.4em;
+}
+
+.curcondition{
+  font-size: 3.4em;
+}
+
+#descript{
+  font-size: 4em;
+}
+
+.backbtn{
+  margin-top: 5em;
+  border: none;
+  border-radius: 5px;
+  padding: .5em;
 }
 
 

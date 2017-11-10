@@ -41,21 +41,30 @@ $(document).ready(function(){
   $.ajax({
     url: weatherCity + city + imperial + apiKey,
     success: function(data){
+
       var cityName = document.getElementById("city");
       var temp = document.getElementById("temp");
-      var descript = document.getElementById("descript")
+      var descript = document.getElementById("descript");
+
         console.log("success", data);
+
+        //hide welcome page after search
         $(".welcomepage").hide();
+
+        //show results after search
         $(".searchResults").removeClass("hideSearchresults");
-        cityName.innerHTML = data.name + ", " + data.sys.country;
-        temp.innerHTML = Math.round(data.main.temp) + "°";
-        $.each(data.weather, function(){
-          descript.innerHTML = data.weather.description;
+
+        //data displayed from object results for city and current temp
+          cityName.innerHTML = data.name + ", " + data.sys.country;
+          temp.innerHTML = Math.round(data.main.temp) + "°";
+
+          //loop through weather array
+        $.each(data.weather, function(i){
+          console.log(data.weather[i].description);
+              descript.innerHTML = data.weather[i].description;
         });
     },
   });
 };
-
-
 
 });

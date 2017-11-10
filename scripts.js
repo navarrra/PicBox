@@ -43,12 +43,15 @@ $(document).ready(function(){
     success: function(data){
       var cityName = document.getElementById("city");
       var temp = document.getElementById("temp");
+      var descript = document.getElementById("descript")
         console.log("success", data);
         $(".welcomepage").hide();
         $(".searchResults").removeClass("hideSearchresults");
         cityName.innerHTML = data.name + ", " + data.sys.country;
-        temp.innerHTML = data.main.temp + "°";
-
+        temp.innerHTML = Math.round(data.main.temp) + "°";
+        $.each(data.weather, function(){
+          descript.innerHTML = data.weather.description;
+        });
     },
   });
 };

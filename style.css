@@ -263,12 +263,19 @@ a{
   }
 
   #temp{
-    font-size: 6em;
+    font-size: 3.6em;
   }
 
   .curtemp{
-    font-size: 3.4em;
+    margin-top: 1em;
+    font-size: 2.4em;
+  }
+  .curcondition{
+    font-size: 2.4em;
   }
 
+  #descript{
+    font-size: 3.6em;
+  }
 
 }

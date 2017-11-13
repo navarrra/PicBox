@@ -29,6 +29,14 @@ $(document).ready(function(){
 
   $(".searchBtn").click(getWeather);
 
+  $(".backbtn").click(function(){
+    $(".searchResults").addClass("hideSearchresults");
+    $(".welcomepage").show();
+    $(".searchbox").val("")
+  });
+
+
+
   //ajax request to connect to api
   function getWeather(city){
   var weatherAPI = "http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=";

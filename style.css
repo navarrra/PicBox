@@ -205,7 +205,7 @@ a{
 .searchResults{
   margin-top: 15em;
   text-align: center;
-
+  border: solid;
 }
 
 .hideSearchresults{
@@ -225,6 +225,10 @@ a{
   position: relative;
   margin-top: 2em;
   font-size: 3.4em;
+}
+
+#humidity{
+  font-size: 3em;
 }
 
 .curcondition{

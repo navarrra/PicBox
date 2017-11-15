@@ -51,8 +51,9 @@ $(document).ready(function(){
     success: function(data){
 
       var cityName = document.getElementById("city");
-      var temp = document.getElementById("temp");
       var descript = document.getElementById("descript");
+      var highlow = ["temp" ,"humidity"];
+
 
         console.log("success", data);
 
@@ -64,13 +65,32 @@ $(document).ready(function(){
 
         //data displayed from object results for city and current temp
           cityName.innerHTML = data.name + ", " + data.sys.country;
-          temp.innerHTML = Math.round(data.main.temp) + "°";
 
           //loop through weather array
         $.each(data.weather, function(i){
           console.log(data.weather[i].description);
               descript.innerHTML = data.weather[i].description;
         });
+            //loop through array
+          $.each(highlow, function(i){
+              //loop through api main
+              $.each(data.main, function(j){
+                //if statements for matching class with object
+                if(highlow[i]==[j]){
+                  //if statement for degree symbol
+                    if(highlow[i]=="temp"){
+                    document.getElementById(highlow[i]).innerHTML = Math.round(data.main[j]) + "°";
+                    //else statement for percentage symbol
+                  }else{
+                    document.getElementById(highlow[i]).innerHTML = Math.round(data.main[j]) + "%";
+                  };  
+                }else{
+                  console.log('failure');
+                }
+              });
+        });
+
+
     },
   });
 };

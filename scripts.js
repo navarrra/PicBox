@@ -51,7 +51,7 @@ $(document).ready(function(){
     success: function(data){
 
       var cityName = document.getElementById("city");
-      var descript = document.getElementById("descript");
+      var description = ["description", "icon"];
       var highlow = ["temp" ,"humidity"];
 
 
@@ -67,9 +67,18 @@ $(document).ready(function(){
           cityName.innerHTML = data.name + ", " + data.sys.country;
 
           //loop through weather array
-        $.each(data.weather, function(i){
-          console.log(data.weather[i].description);
-              descript.innerHTML = data.weather[i].description;
+        $.each(data.weather["0"], function(i){
+            $.each(description, function(j){
+                if(description[j]==[i]){
+                    document.getElementById(description[j]).innerHTML = data.weather["0"][i];
+                    if(description[j]=="icon"){
+                      var icon = data.weather["0"].icon;
+                      //append icon
+                      console.log(data.weather["0"].icon)
+                      $("#icon").prepend("<img src='http://openweathermap.org/img/w/" + icon + ".png'>" );
+                    };
+                };
+            });
         });
             //loop through array
           $.each(highlow, function(i){
@@ -83,15 +92,12 @@ $(document).ready(function(){
                     //else statement for percentage symbol
                   }else{
                     document.getElementById(highlow[i]).innerHTML = Math.round(data.main[j]) + "%";
-                  };  
-                }else{
-                  console.log('failure');
+                  };
                 }
               });
         });
-
-
     },
+
   });
 };
 

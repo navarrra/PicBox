@@ -29,7 +29,7 @@ $(document).ready(function(){
 
   $(".searchBtn").click(getWeather);
 
-  $(".backbtn .home").click(function(){
+  $(".backbtn, .home").click(function(){
     $(".searchResults").addClass("hideSearchresults");
     $(".welcomepage").show();
     $(".searchbox").val("")

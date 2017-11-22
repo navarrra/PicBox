@@ -93,7 +93,7 @@ $(document).ready(function(){
                   }else{
                     document.getElementById(highlow[i]).innerHTML = Math.round(data.main[j]) + "%";
                   };
-                }
+                };
               });
         });
     },

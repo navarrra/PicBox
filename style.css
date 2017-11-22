@@ -34,7 +34,7 @@ body{
 #menutab{
   width: 35px;
   height:auto;
-  margin:.4em;
+  margin:.8em;
 }
 
 .signupbtn{
@@ -180,7 +180,7 @@ a{
   border:none;
   margin-top: 1em;
   padding:20px;
-  margin-left: -3.5px;
+  margin-left: -3.7px;
 
 }
 
@@ -216,6 +216,9 @@ a{
   border: white;
   background-color: white;
   padding-top: 2em;
+  /*temp background*/
+  background-image: url("https://i.imgur.com/dsQ2LMh.jpg");
+  background-size: cover;
 }
 
 .hideSearchresults{
@@ -255,6 +258,10 @@ a{
   border: none;
   border-radius: 5px;
   padding: .5em;
+}
+
+#icon{
+  font-size: 0;
 }
 
 

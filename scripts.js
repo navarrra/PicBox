@@ -36,6 +36,18 @@ $(document).ready(function(){
   });
 
 
+  $("#cbutton").click(function(){
+    //turn on Cbutton turn off fbutton
+    $(this).addClass("onbtn").val("on");
+      $("#fbutton").removeClass("onbtn").val("off");
+      //turn on fbutton turn off cbutton
+      $("#fbutton").click(function(){
+        $(this).addClass("onbtn").val("on");
+          $("#cbutton").removeClass("onbtn").val("off");
+    });
+  });
+
+
 
   //ajax request to connect to api
   function getWeather(city){
@@ -45,6 +57,10 @@ $(document).ready(function(){
   var city = "q=" + $(".searchbox").val();
   var metric = "&units=metric";
   var imperial = "&units=imperial";
+
+  if($("#fbutton").val()==="on"){
+
+  }
 
   $.ajax({
     url: weatherCity + city + imperial + apiKey,

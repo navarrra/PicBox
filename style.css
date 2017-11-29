@@ -187,9 +187,13 @@ a{
 #cbutton{
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+}
+
+.onbtn{
   background-color: #00ccff;
   border-right: solid #00ccff;
 }
+
 
 #fbutton{
   border-top-right-radius: 10px;

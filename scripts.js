@@ -57,18 +57,66 @@ $(document).ready(function(){
   var city = "q=" + $(".searchbox").val();
   var metric = "&units=metric";
   var imperial = "&units=imperial";
+  var fcButton;
 
   if($("#fbutton").val()==="on"){
-
+     fcButton = "&units=imperial";
+  }else{
+    fcButton = "&units=metric";
   }
 
+
   $.ajax({
-    url: weatherCity + city + imperial + apiKey,
+    url: weatherCity + city + fcButton + apiKey,
     success: function(data){
 
       var cityName = document.getElementById("city");
       var description = ["description", "icon"];
       var highlow = ["temp" ,"humidity"];
+
+        //background switch statement
+        var background = data.weather['0'].icon;
+        switch(background){
+            case '01n':
+            case '01d':
+              console.log("1");    $(".searchResults").css("background-image", "url('http://allswalls.com/images/clear-sky-wallpaper-3.jpg')");
+                break;
+            case '02n':
+            case '02d':
+              console.log("1");    $(".searchResults").css("background-image", "url('https://aujasus.files.wordpress.com/2011/04/amazon-and-the-cloud.jpg')");
+                break;
+            case '03n':
+            case '03d':
+              console.log("1");    $(".searchResults").css("background-image", "url('https://images.freeimages.com/images/large-previews/c1a/blue-sky-and-clouds-1400674.jpg')");
+                break;
+            case '04n':
+            case '04d':
+              console.log("1");    $(".searchResults").css("background-image", "url('https://img00.deviantart.net/fa39/i/2015/052/6/1/broken_clouds_by_leo_6tos-d8ixdlv.jpg')");
+                break;
+            case '09n':
+            case '09d':
+              console.log("1");    $(".searchResults").css("background-image", "url('https://i.pinimg.com/736x/3c/88/a4/3c88a4c7142345ccf72b69afd51301a9--rainy-morning-iphone-wallpaper.jpg')");
+                break;
+            case '10n':
+            case '10d':
+              console.log("1");    $(".searchResults").css("background-image", "url('https://i.pinimg.com/736x/3c/88/a4/3c88a4c7142345ccf72b69afd51301a9--rainy-morning-iphone-wallpaper.jpg')");
+                break;
+            case '11n':
+            case '11d':
+              console.log("1");    $(".searchResults").css("background-image", "url('https://i.pinimg.com/736x/ca/3b/ff/ca3bff05bbaa2a87865de9a1668c6884--lightning-storms-lightning-strikes.jpg')");
+                break;
+            case '13n':
+            case '13d':
+              console.log("1");    $(".searchResults").css("background-image", "url('https://arch5541.files.wordpress.com/2012/11/snow.jpg')");
+                break;
+            case '50n':
+            case '50d':
+              console.log("1");    $(".searchResults").css("background-image", "url('https://i.imgur.com/dsQ2LMh.jpg')");
+                break;
+            default:$(".searchResults").css("background-image", "url('https://i.imgur.com/dsQ2LMh.jpg')");
+            console.log('2');
+
+        };
 
 
         console.log("success", data);

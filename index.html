@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>picBox</title>
+    <title>weatherBox</title>
       <link href="https://fonts.googleapis.com/css?family=Pacifico|Indie+Flower|Lobster" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="..\..\GitHub\PicBox\normalize.css">
       <link rel="stylesheet" type="text/css" href="..\..\GitHub\PicBox\style.css">
@@ -71,17 +71,25 @@
     </div>
 
     <!---search results--->
-    <div class="searchResults hideSearchresults">
 
+    <div class="searchResults hideSearchresults">
       <div id="city"></div>
         <div id="icon"></div>
           <div class="iconpic"></div>
-          <h3 class="curtemp"> Current Temperature:</h3>
-            <div id="temp"></div>
-          <h3 class="curtemp">Humidity:</h3>
-            <div id="humidity"></div>
-          <h3 class="curtemp">Current Conditions:</h3>
-            <div id="description"></div>
+        <div class="result">
+          <div class="results result1">
+            <h3 class="curtemp"> Current Temperature:</h3>
+              <div id="temp"></div>
+          </div>
+          <div class="results result2">
+            <h3 class="curtemp">Humidity:</h3>
+              <div id="humidity"></div>
+          </div>
+          <div class="results result3">
+            <h3 class="curtemp">Current Conditions:</h3>
+              <div id="description"></div>
+          </div>
+        </div>
       <div>
         <button class="backbtn">Back to search</button>
       </div>

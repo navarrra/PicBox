@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+  //variables for menu
   var $menuTab = $("#menutab");
   var $menuList = $('.overlay');
   var $menuItems = $("li");
@@ -11,6 +13,7 @@ $(document).ready(function(){
     $menuList.toggleClass("showmenu"); //show menu
     //blur background of main content
   });
+
   //click on list item hidemenu
   $menuItems.on("click", function(){
     $menuList.toggleClass("showmenu");//hide menu
@@ -22,20 +25,23 @@ $(document).ready(function(){
     $(".signup").show("slow");
   })
 
+
   //hide sign up
   $cancel.click(function(){
     $(".signup").hide("slow");
   });
 
+  //Search button
   $(".searchBtn").click(getWeather);
 
   $(".backbtn, .home").click(function(){
     $(".searchResults").addClass("hideSearchresults");
     $(".welcomepage").show();
-    $(".searchbox").val("")
+    $(".searchbox").val("");
+
   });
 
-
+  //CF buttons
   $("#cbutton").click(function(){
     //turn on Cbutton turn off fbutton
     $(this).addClass("onbtn").val("on");
@@ -59,6 +65,7 @@ $(document).ready(function(){
   var imperial = "&units=imperial";
   var fcButton;
 
+  //if statement for metric and imperial unit assignment
   if($("#fbutton").val()==="on"){
      fcButton = "&units=imperial";
   }else{
@@ -78,45 +85,45 @@ $(document).ready(function(){
         var background = data.weather['0'].icon;
         switch(background){
             case '01n':
-            case '01d':
+            case '01d': /*consolelog temp*/
               console.log("1");    $(".searchResults").css("background-image", "url('http://allswalls.com/images/clear-sky-wallpaper-3.jpg')");
                 break;
             case '02n':
-            case '02d':
+            case '02d': /*consolelog temp*/
               console.log("1");    $(".searchResults").css("background-image", "url('https://aujasus.files.wordpress.com/2011/04/amazon-and-the-cloud.jpg')");
                 break;
             case '03n':
-            case '03d':
+            case '03d': /*consolelog temp*/
               console.log("1");    $(".searchResults").css("background-image", "url('https://images.freeimages.com/images/large-previews/c1a/blue-sky-and-clouds-1400674.jpg')");
                 break;
             case '04n':
-            case '04d':
+            case '04d': /*consolelog temp*/
               console.log("1");    $(".searchResults").css("background-image", "url('https://img00.deviantart.net/fa39/i/2015/052/6/1/broken_clouds_by_leo_6tos-d8ixdlv.jpg')");
                 break;
             case '09n':
-            case '09d':
+            case '09d': /*consolelog temp*/
               console.log("1");    $(".searchResults").css("background-image", "url('https://i.pinimg.com/736x/3c/88/a4/3c88a4c7142345ccf72b69afd51301a9--rainy-morning-iphone-wallpaper.jpg')");
                 break;
             case '10n':
-            case '10d':
+            case '10d': /*consolelog temp*/
               console.log("1");    $(".searchResults").css("background-image", "url('https://i.pinimg.com/736x/3c/88/a4/3c88a4c7142345ccf72b69afd51301a9--rainy-morning-iphone-wallpaper.jpg')");
                 break;
             case '11n':
-            case '11d':
+            case '11d': /*consolelog temp*/
               console.log("1");    $(".searchResults").css("background-image", "url('https://i.pinimg.com/736x/ca/3b/ff/ca3bff05bbaa2a87865de9a1668c6884--lightning-storms-lightning-strikes.jpg')");
                 break;
             case '13n':
-            case '13d':
+            case '13d': /*consolelog temp*/
               console.log("1");    $(".searchResults").css("background-image", "url('https://arch5541.files.wordpress.com/2012/11/snow.jpg')");
                 break;
             case '50n':
-            case '50d':
+            case '50d': /*consolelog temp*/
               console.log("1");    $(".searchResults").css("background-image", "url('https://i.imgur.com/dsQ2LMh.jpg')");
-                break;
+                break; /*consolelog temp*/
             default:$(".searchResults").css("background-image", "url('https://i.imgur.com/dsQ2LMh.jpg')");
             console.log('2');
 
-        };
+        };//end
 
 
         console.log("success", data);
@@ -126,6 +133,12 @@ $(document).ready(function(){
 
         //show results after search
         $(".searchResults").removeClass("hideSearchresults");
+
+        // if($(window).width()<670){
+        //   $(".subnav").addClass("hideSearchresults");
+        // }else {
+        //   $("subnav").removeClass("hideSearchresults")
+        // }
 
         //data displayed from object results for city and current temp
           cityName.innerHTML = data.name + ", " + data.sys.country;
@@ -143,7 +156,9 @@ $(document).ready(function(){
                     };
                 };
             });
-        });
+          });//end
+
+
             //loop through array
           $.each(highlow, function(i){
               //loop through api main
@@ -159,7 +174,8 @@ $(document).ready(function(){
                   };
                 };
               });
-        });
+            });//end
+
     },
 
   });

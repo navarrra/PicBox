@@ -5,7 +5,7 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
 
 .mainpage{
@@ -26,9 +26,25 @@ body{
   top: 0;
   right: 0;
   box-shadow: 0px 15px 30px -19px rgba(0, 0, 0, .8); /*gives the box a nice float look*/
-  z-index: 13;
+  z-index: 16;
   position: absolute;
 }
+
+.subnav{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: white;
+  margin-top: 4em;
+  margin-right: -2em;
+  z-index: 15;
+  position: relative;
+  visibility: hidden;
+}
+
+.subclick{
+  color:black;
+}
+
 
 #menutab{
   width: 35px;
@@ -214,13 +230,11 @@ a{
 **************************/
 
 .searchResults{
-  margin-top: 5em;
+  margin-top: -3em;
   text-align: center;
   border: white;
   background-color: white;
   padding-top: 2em;
-  /*temp background*/
-  /*background-image: url("https://i.imgur.com/dsQ2LMh.jpg");*/
   background-size: cover;
 }
 
@@ -271,25 +285,37 @@ a{
 
 @media screen and (min-width : 670px)  {
   body{
+      background-color: black;
       background-image: url("http://www.natures-desktop.com/images/wallpapers/1680x1050/night/neon-lights-raindrops.jpg");
   }
+
   .nav{
       width: 100.7%;
       height: 4em;
+  }
+  .subnav{
+    visibility: visible;
+  }
+
+  .item1{
+    visibility: hidden;
   }
 
   .welcomepage{
     margin-top: 6em;
     color:white;
+
   }
 
   .searchResults{
-    margin-top: 4em;
+    margin-top: -1.4em;
+    margin-right: -1em;
     color:white;
   }
 
   #city{
     font-size: 3.6em;
+    margin-top:1em;
   }
 
   #temp{
@@ -337,7 +363,8 @@ a{
    }
 
    .backbtn{
-     margin-bottom: 9em;
+     margin-top: -3em;
+     margin-bottom: em;
    }
 
 }

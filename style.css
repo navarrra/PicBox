@@ -236,6 +236,15 @@ a{
   background-color: white;
   padding-top: 2em;
   background-size: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+#current{
+  padding-bottom:3em;
 }
 
 .hideSearchresults{
@@ -283,6 +292,18 @@ a{
   font-size: 0;
 }
 
+#current{
+  position: relative;
+}
+
+.threeday{
+  display: flex;
+  position: relative;
+  margin-top: -25em;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
 
 @media screen and (min-width : 670px)  {
   body{
@@ -310,8 +331,9 @@ a{
 
   .searchResults{
     margin-top: -1.4em;
-    margin-right: -1em;
+    margin-right: -3em;
     color:white;
+
   }
 
   #city{
@@ -366,6 +388,11 @@ a{
    .backbtn{
      margin-top: -3em;
      margin-bottom: em;
+   }
+
+   .threeday{
+     flex-direction: row;
+
    }
 
 }

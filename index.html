@@ -92,33 +92,43 @@
          <h2><a class="subclick" href="#">Current</a></h2>
         </div>
           <div class="flex-subitem subitem2 subbar">
-            <h2><a class="subclick" href="#">5-Day</a></h2>
+            <h2><a class="subclick fiveday" href="#">5-Day</a></h2>
           </div>
         <div class="flex-subitem subitem3 subbar">
           <h2><a class="subclick" href="#">10-Day</a></h2>
         </div>
       </div>
+
       <div id="city"></div>
-        <div id="icon_url"></div>
-          <div class="icon_url"></div>
-        <div class="result">
-          <div class="results result1">
-            <h3 class="curtemp"> Current Temperature:</h3>
-              <div id="temp_f"></div>
-          </div>
-          <div class="results result2">
-            <h3 class="curtemp">Precipitation:</h3>
-              <div id="precip_today_in"></div>
-          </div>
-          <div class="results result3">
-            <h3 class="curtemp">Current Conditions:</h3>
-              <div id="weather"></div>
+      <!--Current weather-->
+        <div id="current">
+          <div id="icon_url"></div>
+            <div class="icon_url"></div>
+          <div class="result">
+            <div class="results result1">
+              <h3 class="curtemp"> Current Temperature:</h3>
+                <div id="temp_f"></div>
+            </div>
+            <div class="results result2">
+              <h3 class="curtemp">Precipitation:</h3>
+                <div id="precip_today_in"></div>
+            </div>
+            <div class="results result3">
+              <h3 class="curtemp">Current Conditions:</h3>
+                <div id="weather"></div>
+            </div>
           </div>
         </div>
-      <div>
-        <button class="backbtn">Back to search</button>
-      </div>
+    <!--3day forcast-->
+        <div class="threeday">
+          <div class="day" id="weekday_short"></div>
+          <div class="day" id="icon_url"></div>
+        </div>
+
     </div>
+    <!-- <div>
+      <button class="backbtn">Back to search</button>
+    </div> -->
   </div>
   </body>
 </html>

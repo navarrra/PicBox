@@ -54,32 +54,24 @@ $(document).ready(function(){
   });
 
   var apiKey = "72524e825328238b";
-  var metric = "&units=metric";
-  var imperial = "&units=imperial";
   var fcButton;
 
   //ajax request to connect to api
   function getWeather(city){
   // var urls = [/*"http://api.openweathermap.org/data/2.5/forecast?"*/, "http://api.openweathermap.org/data/2.5/weather?"];
   var weatherCity = "http://api.wunderground.com/api/"
-  var city = "/conditions" + "/q/" + $(".searchbox").val() + ".json";
-
-
-  // //if statement for metric and imperial unit assignment
-  // if($("#fbutton").val()==="on"){
-  //    fcButton = data.current_observation.temp_f;
-  // }else{
-  //   fcButton = data.current_observation.temp_c;
-  // }
+  var city =   $(".searchbox").val() + ".json";
+  var conditions = "/conditions" + "/q/";
+  var forecast = "/forecast" + "/q/";
 
   $.ajax({
-    url: weatherCity + apiKey + city,
+    url: weatherCity + apiKey + conditions + city,
     success: function(data){
       var temp = document.getElementById("temp_f");
       var cityName = document.getElementById("city");
       var description = ["weather", "icon_url", "precip_today_in"];
-      var highlow = [ ,"humidity"];
 
+        //if statement for metric and imperial unit assignment
       if($("#fbutton").val()==="on"){
          fcButton = temp.innerHTML = Math.round(data.current_observation.temp_f) + '°';
       }else{
@@ -154,31 +146,35 @@ $(document).ready(function(){
             });
           });//end of loop
 
-
-          //   //loop through array
-          // $.each(highlow, function(i){
-          //     //loop through api main
-          //     $.each(data.main, function(j){
-          //       //if statements for matching class with object
-          //       if(highlow[i]==[j]){
-          //         //if statement for degree symbol
-          //           if(highlow[i]=="temp"){
-          //           document.getElementById(highlow[i]).innerHTML = Math.round(data.main[j]) + "°";
-          //           //else statement for percentage symbol
-          //         }else{
-          //           document.getElementById(highlow[i]).innerHTML = Math.round(data.main[j]) + "%";
-          //         };
-          //       };
-          //     });
-          //   });//end of loop
             //started 5 day forcast api call
               $(".fiveday").click(function(){
-                var url = "http://api.openweathermap.org/data/2.5/forecast/daily?";
+                  $("#current").animate({"left": "-100%"});
+
                 $.ajax({
-                  url: url + city + apiKey,
+                  url: weatherCity + apiKey + forecast + city,
                   success: function(data){
                     console.log(data);
-                    console.log("winner");
+                    var forecastDate= data.forecast.simpleforecast.forecastday;
+                    var forecast = data.forecast.simpleforecast.forecastday;
+                    var day = ["weekday_short", "icon_url"];
+                    
+                    for(var i = 1 ; i < forecastDate.length; i++){
+                        // console.log(forecastDate[i]);
+                         var days = forecastDate[i].date.weekday_short;
+                        $("#weekday_short").append("<div><h3>"+ days + "</h3></div>");
+                    };
+
+
+
+
+                    // $.each(forecast, function(i){
+                    //   console.log(forecast[i]);
+                    //   if(forecast[i]=="weekday_short"){
+                    //     console.log('winner');
+                    //   }
+                    //
+                    //
+                    // });
                 },
               });
             });

@@ -235,16 +235,16 @@ a{
   border: white;
   background-color: white;
   padding-top: 2em;
-  background-size: cover;
+  background-size:cover;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: -3.4em;
   position: absolute;
 }
 
 #current{
-  padding-bottom:3em;
+  padding-bottom:0;
 }
 
 .hideSearchresults{
@@ -296,13 +296,20 @@ a{
   position: relative;
 }
 
-.threeday{
+.day{
   display: flex;
   position: relative;
   margin-top: -25em;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
+  justify-content:space-around;
+  margin-left: 30%;
+  margin-right: 30%;
+  flex-wrap: wrap;
+
+}
+
+#icon_url3{
+  height: 100px;
 }
 
 @media screen and (min-width : 670px)  {
@@ -391,8 +398,14 @@ a{
    }
 
    .threeday{
-     flex-direction: row;
 
+   }
+
+   .day{
+    flex-direction: row;
+    justify-content:space-around;
+    position: relative;
+    margin-left: -30em;
    }
 
 }

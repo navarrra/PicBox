@@ -155,13 +155,21 @@ $(document).ready(function(){
                   success: function(data){
                     console.log(data);
                     var forecastDate= data.forecast.simpleforecast.forecastday;
-                    var forecast = data.forecast.simpleforecast.forecastday;
-                    var day = ["weekday_short", "icon_url"];
-                    
-                    for(var i = 1 ; i < forecastDate.length; i++){
-                        // console.log(forecastDate[i]);
-                         var days = forecastDate[i].date.weekday_short;
-                        $("#weekday_short").append("<div><h3>"+ days + "</h3></div>");
+
+                    var forecast = [forecastDate];
+
+
+                    for(var i = 0 ; i < forecast.length; i++){
+                         console.log(forecast[i]);
+                        var threeDay = forecast[i];
+
+                         for(var j = 1 ; j < threeDay.length; j++){
+                         var days = threeDay[j].date.weekday_short;
+                         var icon = threeDay[j].icon_url;
+
+                         $("#weekday_short").append("<h3>"+ days + "</h3>");
+                         $("#weekday_short").append("<img class='icon_url3' src='http://icons.wxug.com/i/c/k/partlycloudy.gif'>");
+                      };
                     };
 
 

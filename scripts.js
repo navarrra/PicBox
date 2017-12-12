@@ -166,23 +166,13 @@ $(document).ready(function(){
                          for(var j = 1 ; j < threeDay.length; j++){
                          var days = threeDay[j].date.weekday_short;
                          var icon = threeDay[j].icon_url;
+                         var high = "<h3> High: " +  threeDay[j].high.fahrenheit + "°" + "</h3><br>";
+                         var low = "<h3> low: " +  threeDay[j].low.fahrenheit + "°" + "</h3>";
 
-                         $("#weekday_short").append("<h3>"+ days + "</h3>");
-                         $("#weekday_short").append("<img class='icon_url3' src='http://icons.wxug.com/i/c/k/partlycloudy.gif'>");
+                         $("#weekday_short").append("<div class='result3Day'><h3>"+ days + "</h3><br><img class='icon_url3' src='"+ icon +"'>" + high + low + "</div>");
                       };
                     };
 
-
-
-
-                    // $.each(forecast, function(i){
-                    //   console.log(forecast[i]);
-                    //   if(forecast[i]=="weekday_short"){
-                    //     console.log('winner');
-                    //   }
-                    //
-                    //
-                    // });
                 },
               });
             });

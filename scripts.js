@@ -31,10 +31,13 @@ $(document).ready(function(){
     $(".signup").hide("slow");
   });
 
+
+
+
   //Search button
   $(".searchBtn").click(getWeather);
 
-  $(".backbtn, .home").click(function(){
+  $(".backbtn, .home, .searchsub").click(function(){
     $(".searchResults").addClass("hideSearchresults");
     $(".welcomepage").show();
     $(".searchbox").val("");
@@ -52,6 +55,26 @@ $(document).ready(function(){
           $("#cbutton").removeClass("onbtn").val("off");
     });
   });
+  //started underline function for large submenu
+  $(".three_day").click(function(){
+        $(".current").removeClass("underline");
+        $(this).addClass("underline");
+        $(".current").click(function(){
+            $(this).addClass("underline");
+            $(".three_day").removeClass("underline");
+        });
+  });
+
+  $(".current").click(function(){
+        $("#current").show().animate({"left": "0%"});
+        $("#current").val("on");
+        $("#weekday_short").hide();
+        $(".three_day").click(function(){
+            $("#weekday_short").show();
+        });
+  });
+
+
 
   var apiKey = "72524e825328238b";
   var fcButton;
@@ -147,8 +170,12 @@ $(document).ready(function(){
           });//end of loop
 
             //started 5 day forcast api call
-              $(".fiveday").click(function(){
-                  $("#current").animate({"left": "-100%"});
+              var threebtn = "off";
+              $(".three_day").click(function(){
+                   $("#current").animate({"left": "-100%"}).fadeOut(10);
+                   console.log("all good");
+                  $("#current").val("off");
+                    if( threebtn !=="on"){
 
                 $.ajax({
                   url: weatherCity + apiKey + forecast + city,
@@ -170,11 +197,14 @@ $(document).ready(function(){
                          var low = "<h3> low: " +  threeDay[j].low.fahrenheit + "°" + "</h3>";
 
                          $("#weekday_short").append("<div class='result3Day'><h3>"+ days + "</h3><br><img class='icon_url3' src='"+ icon +"'>" + high + low + "</div>");
+
                       };
                     };
-
                 },
               });
+
+              };
+              threebtn = "on";
             });
 
 

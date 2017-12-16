@@ -21,30 +21,19 @@
          <h1 class="logo">weatherBox</h1>
        </div>
      <div class="flex-item item3 bar">
-       <h3><a class="signupbtn" href="#">Sign Up</a></h3>
+       <h3><a class="signupbtn" href="#">S</a></h3>
      </div>
    </div>
 
-   <!---Top subnav bar--->
-   <div class="flex-container subnav hideSearchresults">
-     <div class="flex-subitem subitem1 subbar">
-      <h2><a class="subclick" href="#">Current</a></h2>
-     </div>
-       <div class="flex-subitem subitem2 subbar">
-         <h2><a class="subclick" href="#">3-Day</a></h2>
-       </div>
-     <div class="flex-subitem subitem3 subbar">
-       <h2><a class="subclick" href="#">10-Day</a></h2>
-     </div>
-   </div>
+
 
    <!---slide out menu--->
   <div class=" menuitems">
    <div class="overlay">
      <ul>
-       <li class="menu"><a href="">Home</a></li>
-       <li class="menu fiveday"><a href="#">5-Day forecast</a></li>
-       <li class="menu"><a href="#">16-Day forecast</a></li>
+       <li class="menu"><a href="">Search</a></li>
+       <li class="menu three_day" id="threeday"><a href="#">3-Day forecast</a></li>
+       <li class="menu"><a href="#">Current</a></li>
      </ul>
    </div>
   </div>
@@ -89,13 +78,13 @@
       <!---Top subnav bar--->
       <div class="flex-container subnav">
         <div class="flex-subitem subitem1 subbar">
-         <h2><a class="subclick" href="#">Current</a></h2>
+         <h2><a class="subclick current underline" value="off" href="#">Current</a></h2>
         </div>
           <div class="flex-subitem subitem2 subbar">
-            <h2><a class="subclick fiveday" href="#">3-Day</a></h2>
+            <h2><a class="subclick three_day" id="threeday"  href="#">3-Day</a></h2>
           </div>
         <div class="flex-subitem subitem3 subbar">
-          <h2><a class="subclick" href="#">Search</a></h2>
+          <h2><a class="subclick searchsub" href="">Search</a></h2>
         </div>
       </div>
 
@@ -108,7 +97,7 @@
             <div class="results result1">
               <h3 class="curtemp"> Current Temperature:</h3>
                 <div id="temp_f"></div>
-            </div>
+          </div>
             <div class="results result2">
               <h3 class="curtemp">Precipitation:</h3>
                 <div id="precip_today_in"></div>
@@ -124,11 +113,11 @@
         </div>
     <!--3day forcast-->
     <!--need to fix flex box probably need to add div after threeday to give individual result boxes-->
-        <div class="threeday">
-          <div class="day" id="weekday_short">
+    <div class="threeday">
+      <div class="day" id="weekday_short">
 
-          </div>
-        </div>
+      </div>
+    </div>
     </div>
   </div>
   </body>

@@ -5,7 +5,6 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-
   background-attachment: fixed;
   width: 100%;
 }
@@ -123,7 +122,6 @@ a{
 .showmenu{
   left:0%;
   transition: left .5s;
-
 }
 
 .hidemenu{
@@ -243,13 +241,14 @@ a{
   top: 0;
   left: 0;
   right: 0;
-  bottom: -3.4em;
+  bottom: -3.4em; //this was 3
   position: absolute;
   background-attachment: fixed;
-  margin-bottom: -10em;
+  /*margin-bottom: 10em;*/
   margin-right: -1em;
   overflow-x: hidden;
   width: 100%;
+  height: 900px;
 
 }
 
@@ -304,6 +303,7 @@ a{
 
 #current{
   position: relative;
+
 }
 
 .day{
@@ -320,6 +320,12 @@ a{
 
 #icon_url3{
   height: 100px;
+}
+
+.threeday{
+  margin-top: 25em;
+  /*height: 100%;*/
+
 }
 
 @media screen and (min-width : 670px)  {
@@ -410,9 +416,6 @@ a{
      margin-bottom: em;
    }
 
-   .threeday{
-
-   }
 
    .day{
     flex-direction: row;
@@ -420,6 +423,18 @@ a{
     position: relative;
     /*margin-left: -30em;*/
     margin-top: -20em;
+
+   }
+
+   .underline{
+     text-decoration: underline;
+     text-decoration-color: #00ccff;
+     padding-bottom: 5px;
+   }
+
+   .result3Day{
+     align-self: center;
+     padding-top: 2em;
    }
 
 }

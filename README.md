@@ -1,3 +1,3 @@
-# PicBox
+# weatherBox
 
-This is a web app that displays pictures
+This is a web app that utilizes the weather underground API.

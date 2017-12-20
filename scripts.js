@@ -31,17 +31,14 @@ $(document).ready(function(){
     $(".signup").hide("slow");
   });
 
-
-
-
-  //Search button
+  //Search button with ajax call function
   $(".searchBtn").click(getWeather);
 
+//back button
   $(".backbtn, .home, .searchsub").click(function(){
     $(".searchResults").addClass("hideSearchresults");
     $(".welcomepage").show();
     $(".searchbox").val("");
-
   });
 
   //CF buttons
@@ -55,6 +52,7 @@ $(document).ready(function(){
           $("#cbutton").removeClass("onbtn").val("off");
     });
   });
+
   //started underline function for large submenu
   $(".three_day").click(function(){
         $(".current").removeClass("underline");
@@ -65,6 +63,7 @@ $(document).ready(function(){
         });
   });
 
+  //click on current submenu to move it back to center
   $(".current").click(function(){
         $("#current").show().animate({"left": "0%"});
         $("#current").val("on");
@@ -72,7 +71,7 @@ $(document).ready(function(){
         $(".three_day").click(function(){
             $("#weekday_short").show();
         });
-  });
+      });
 
 
 
@@ -93,7 +92,7 @@ $(document).ready(function(){
       var temp = document.getElementById("temp_f");
       var cityName = document.getElementById("city");
       var description = ["weather", "icon_url", "precip_today_in"];
-
+      console.log(data)
         //if statement for metric and imperial unit assignment
       if($("#fbutton").val()==="on"){
          fcButton = temp.innerHTML = Math.round(data.current_observation.temp_f) + '°';
@@ -107,18 +106,18 @@ $(document).ready(function(){
 
             case 'clear':
             case 'sunny':
-            case 'mostlysunny': /*consolelog temp*/
+            case 'mostlysunny':
               console.log("1");    $(".searchResults").css("background-image", "url('http://allswalls.com/images/clear-sky-wallpaper-3.jpg')");
                 break;
             case 'partlycloudy':
-            case 'partlysunny': /*consolelog temp*/
+            case 'partlysunny':
               console.log("1");    $(".searchResults").css("background-image", "url('https://aujasus.files.wordpress.com/2011/04/amazon-and-the-cloud.jpg')");
                 break;
-            case 'scatteredclouds':  /*consolelog temp*/
+            case 'scatteredclouds':
               console.log("1");    $(".searchResults").css("background-image", "url('https://images.freeimages.com/images/large-previews/c1a/blue-sky-and-clouds-1400674.jpg')");
                 break;
             case 'mostlycloudy':
-            case 'overcast': /*consolelog temp*/
+            case 'cloudy':
               console.log("1");    $(".searchResults").css("background-image", "url('https://img00.deviantart.net/fa39/i/2015/052/6/1/broken_clouds_by_leo_6tos-d8ixdlv.jpg')");
                 break;
             case 'sleet':
@@ -129,20 +128,18 @@ $(document).ready(function(){
               console.log("1");    $(".searchResults").css("background-image", "url('https://i.pinimg.com/736x/ca/3b/ff/ca3bff05bbaa2a87865de9a1668c6884--lightning-storms-lightning-strikes.jpg')");
                 break;
             case 'snow':
-            case 'flurries': /*consolelog temp*/
+            case 'flurries':
               console.log("1");    $(".searchResults").css("background-image", "url('https://arch5541.files.wordpress.com/2012/11/snow.jpg')");
                 break;
             case 'fog':
-            case 'hazy': /*consolelog temp*/
+            case 'hazy':
               console.log("1");    $(".searchResults").css("background-image", "url('https://i.imgur.com/dsQ2LMh.jpg')");
-                break; /*consolelog temp*/
+                break;
             default:$(".searchResults").css("background-image", "url('https://i.imgur.com/dsQ2LMh.jpg')");
             console.log('2');
 
         };//end of switch state
 
-
-        console.log("success", data);
 
         //hide welcome page after search
         $(".welcomepage").hide();
@@ -198,20 +195,16 @@ $(document).ready(function(){
 
                          $("#weekday_short").append("<div class='result3Day'><h3>"+ days + "</h3><br><img class='icon_url3' src='"+ icon +"'>" + high + low + "</div>");
 
-                      };
-                    };
-                },
-              });
+                                };
+                              };
+                          },
+                        });
 
-              };
-              threebtn = "on";
-            });
-
-
-
-      }, //end of success
-
-    });//end of ajax
+                        };
+                        threebtn = "on";
+                      });
+                }, //end of success
+              });//end of ajax
 
 }; //end of getWeather function
 

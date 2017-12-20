@@ -82,7 +82,7 @@ $(document).ready(function(){
   //ajax request to connect to api
   function getWeather(city){
   // var urls = [/*"http://api.openweathermap.org/data/2.5/forecast?"*/, "http://api.openweathermap.org/data/2.5/weather?"];
-  var weatherCity = "http://api.wunderground.com/api/"
+  var weatherCity = "https://api.wunderground.com/api/"
   var city =   $(".searchbox").val() + ".json";
   var conditions = "/conditions" + "/q/";
   var forecast = "/forecast" + "/q/";

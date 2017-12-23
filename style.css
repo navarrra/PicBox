@@ -226,6 +226,11 @@ a{
   border-radius: 10px;
 }
 
+.err{
+  margin: .3em 0em;
+  
+
+}
 
 /**************************
    Search Result display

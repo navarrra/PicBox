@@ -94,11 +94,17 @@ $(document).ready(function(){
       var description = ["weather", "icon_url", "precip_today_in"];
       console.log(data)
         //if statement for metric and imperial unit assignment
+  try{
       if($("#fbutton").val()==="on"){
          fcButton = temp.innerHTML = Math.round(data.current_observation.temp_f) + '°';
       }else{
          fcButton = temp.innerHTML = Math.round(data.current_observation.temp_c) + '°';
-      }
+      };
+
+    } catch(error){
+          $(".error").append('<p class="err">please include city and state</p>');
+          
+    };
 
         //background switch statement
         var background = data.current_observation.icon;

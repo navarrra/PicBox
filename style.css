@@ -33,13 +33,11 @@ body{
   width: 100%;
 }
 
-.subbar{
-  display: block;
-}
+
 
 .subnav{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   background-color: white;
   margin-top: 4em;
   margin-right: -2em;

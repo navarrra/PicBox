@@ -33,6 +33,10 @@ body{
   width: 100%;
 }
 
+.subbar{
+  display: block;
+}
+
 .subnav{
   display: flex;
   justify-content: space-evenly;
@@ -228,7 +232,7 @@ a{
 
 .err{
   margin: .3em 0em;
-  
+
 
 }
 

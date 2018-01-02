@@ -332,7 +332,21 @@ a{
 .threeday{
   margin-top: 25em;
   /*height: 100%;*/
+}
 
+.err{
+  color:red;
+  text-align: center;
+  margin-top: -1.5em;
+  font-weight: bold;
+  display: none
+}
+
+.result3Day{
+  background-color: rgba(2, 117, 167, .8);
+  border-radius: 15px;
+  padding: 0.5em;
+  margin-top:.5em;
 }
 
 @media screen and (min-width : 670px)  {
@@ -441,7 +455,9 @@ a{
 
    .result3Day{
      align-self: center;
-     padding-top: 2em;
+     padding: 2em;
+     background-color: rgba(2, 117, 167, .8);
+     border-radius: 15px;
    }
 
 }

@@ -339,7 +339,7 @@ a{
   body{
       background-color: black;
       /* background-image: url("http://www.natures-desktop.com/images/wallpapers/1680x1050/night/neon-lights-raindrops.jpg"); */
-      background-image: src="./backgrounds/largeback";
+      background-image: url("https://rawgit.com/navarrra/weatherBox/master/backgrounds/largeback.jpg");
   }
 
   .nav{

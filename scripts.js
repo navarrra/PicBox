@@ -103,7 +103,7 @@ $(document).ready(function(){
 
     } catch(error){
           $(".error").append('<p class="err">please include city and state</p>');
-          
+
     };
 
         //background switch statement
@@ -113,35 +113,35 @@ $(document).ready(function(){
             case 'clear':
             case 'sunny':
             case 'mostlysunny':
-              console.log("1");    $(".searchResults").css("background-image", "url('http://allswalls.com/images/clear-sky-wallpaper-3.jpg')");
+              console.log("1");    $(".searchResults").css("background-image", "url('https://rawgit.com/navarrra/weatherBox/master/backgrounds/sunnyback.jpg')");
                 break;
             case 'partlycloudy':
             case 'partlysunny':
-              console.log("1");    $(".searchResults").css("background-image", "url('https://aujasus.files.wordpress.com/2011/04/amazon-and-the-cloud.jpg')");
+              console.log("1");    $(".searchResults").css("background-image", "url('https://rawgit.com/navarrra/weatherBox/master/backgrounds/partlycloudyback.jpg')");
                 break;
             case 'scatteredclouds':
-              console.log("1");    $(".searchResults").css("background-image", "url('https://images.freeimages.com/images/large-previews/c1a/blue-sky-and-clouds-1400674.jpg')");
+              console.log("1");    $(".searchResults").css("background-image", "url('https://rawgit.com/navarrra/weatherBox/master/backgrounds/scatteredback.jpg')");
                 break;
             case 'mostlycloudy':
             case 'cloudy':
-              console.log("1");    $(".searchResults").css("background-image", "url('https://img00.deviantart.net/fa39/i/2015/052/6/1/broken_clouds_by_leo_6tos-d8ixdlv.jpg')");
+              console.log("1");    $(".searchResults").css("background-image", "url('https://rawgit.com/navarrra/weatherBox/master/backgrounds/cloudyback.jpg')");
                 break;
             case 'sleet':
             case 'rain':
-              console.log("1");    $(".searchResults").css("background-image", "url('https://i.pinimg.com/736x/3c/88/a4/3c88a4c7142345ccf72b69afd51301a9--rainy-morning-iphone-wallpaper.jpg')");
+              console.log("1");    $(".searchResults").css("background-image", "url('https://rawgit.com/navarrra/weatherBox/master/backgrounds/rainback.jpg')");
                 break;
             case 'tstorms':
-              console.log("1");    $(".searchResults").css("background-image", "url('https://i.pinimg.com/736x/ca/3b/ff/ca3bff05bbaa2a87865de9a1668c6884--lightning-storms-lightning-strikes.jpg')");
+              console.log("1");    $(".searchResults").css("background-image", "url('https://rawgit.com/navarrra/weatherBox/master/backgrounds/tstormsback.jpg')");
                 break;
             case 'snow':
             case 'flurries':
-              console.log("1");    $(".searchResults").css("background-image", "url('https://arch5541.files.wordpress.com/2012/11/snow.jpg')");
+              console.log("1");    $(".searchResults").css("background-image", "url('https://rawgit.com/navarrra/weatherBox/master/backgrounds/snowback.jpg')");
                 break;
             case 'fog':
             case 'hazy':
-              console.log("1");    $(".searchResults").css("background-image", "url('https://i.imgur.com/dsQ2LMh.jpg')");
+              console.log("1");    $(".searchResults").css("background-image", "url('https://rawgit.com/navarrra/weatherBox/master/backgrounds/fogback.jpg')");
                 break;
-            default:$(".searchResults").css("background-image", "url('https://i.imgur.com/dsQ2LMh.jpg')");
+            default:$(".searchResults").css("background-image", "url('https://rawgit.com/navarrra/weatherBox/master/backgrounds/fogback.jpg')");
             console.log('2');
 
         };//end of switch state

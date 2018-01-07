@@ -101,7 +101,7 @@ $(document).ready(function(){
       var temp = document.getElementById("temp_f");
       var cityName = document.getElementById("city");
       var description = ["weather", "icon_url", "precip_today_in"];
-      console.log(data)
+    
         //if statement for metric and imperial unit assignment
             try{
                 if($("#fbutton").val()==="on"){
@@ -182,7 +182,6 @@ $(document).ready(function(){
                     if(description[j]=="icon_url"){
                       var icon = data.current_observation.icon_url;
                       //append icon
-                      console.log(data.current_observation.icon_url);
                       $("#icon_url").prepend("<img src='" + icon + "'>" );
                     };
                 };
@@ -193,7 +192,7 @@ $(document).ready(function(){
               var threebtn = "off";
               $(".three_day").click(function(){
                    $("#current").animate({"left": "-100%"}).fadeOut(10);
-                   console.log("all good");
+
                   $("#current").val("off");
                     if( threebtn !=="on"){
 

@@ -59,6 +59,7 @@ body{
 
 .signupbtn{
   font-size:15px;
+  visibility: hidden;
 }
 
 .bar{

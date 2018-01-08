@@ -79,7 +79,7 @@ margin-top: -.1em;
 }
 
 /**************************
-         SLIDEOUT MENU
+      SLIDEOUT MENU
 **************************/
 ul{
   margin: 10em 1em;
@@ -183,6 +183,17 @@ a{
   font-family: 'Pacifico', cursive;
   font-size: 3.8em;
   text-align: center;
+}
+
+.logopic{
+  width: 80px;
+  height: 80px;
+  background: orange;
+  margin: auto;
+  margin-top: -2em;
+  background-image: url("C:/Users/navarrra/Documents/GitHub/PicBox/backgrounds/cloud_sun.png");
+  background-size: cover;
+  border-radius: 5px;
 }
 
 .entercity{
@@ -443,7 +454,8 @@ a{
     flex-direction: row;
     justify-content:space-around;
     position: relative;
-    /*margin-left: -30em;*/
+    margin-left: 10%;
+    margin-right: 10%;
     margin-top: -20em;
 
    }

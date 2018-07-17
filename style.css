@@ -262,7 +262,7 @@ a{
   right: 0;
   bottom: -3.4em; //this was 3
   position: absolute;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   /*margin-bottom: 10em;*/
   margin-right: -1em;
   overflow-x: hidden;

@@ -191,7 +191,7 @@ a{
   background: orange;
   margin: auto;
   margin-top: -2em;
-  background-image: url("weatherbox/backgrounds/cloud_sun.png");
+  background-image: url("weatherBox/backgrounds/cloud_sun.png");
   background-size: cover;
   border-radius: 5px;
 }

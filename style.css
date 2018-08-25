@@ -191,7 +191,7 @@ a{
   background: orange;
   margin: auto;
   margin-top: -2em;
-  background-image: url("weatherBox/backgrounds/cloud_sun.png");
+  background-image: url("https://cdn.rawgit.com/navarrra/weatherBox/c278d132/backgrounds/cloud_sun.png");
   background-size: cover;
   border-radius: 5px;
 }
